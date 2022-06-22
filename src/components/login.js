@@ -56,8 +56,8 @@ class Login extends Component {
       let user_list = JSON.parse(localStorage.getItem("list"));
 
       for(let account of user_list) {
-        if(this.state.emailog == account.email) {
-          if(this.state.passwordlog == account.password) {
+        if(this.state.emailog === account.email) {
+          if(this.state.passwordlog === account.password) {
             alert('You are logged in , redirecting you to the todolist');
             window.location='/landing';
             throw("");
