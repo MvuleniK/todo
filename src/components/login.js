@@ -34,7 +34,7 @@ class Login extends Component {
 
 
   handleLogin = (event) => {
-    var accounts = JSON.parse(localStorage.getItem('list'));
+    // var accounts = JSON.parse(localStorage.getItem('list'));
 
   //   for(let current of accounts){
   //     if(this.state.emailog === current.mail && this.state.passwordlog === current.pass){
@@ -59,7 +59,8 @@ class Login extends Component {
         if(this.state.emailog === account.email) {
           if(this.state.passwordlog === account.password) {
             alert('You are logged in , redirecting you to the todolist');
-            window.location='/landing';
+            // window.location='/landing';
+            window.location='/todo';
             throw("");
           }
           else {
@@ -91,11 +92,11 @@ class Login extends Component {
           <form onSubmit={this.handleLogin}>
 
             <h1>Login</h1>
-            <label>Email :</label> <input type="text" value={this.state.emailog} onChange={this.emailoghandler} placeholder="Inital value"/><br />
-            <label>Password :</label> <input type="password" value={this.state.passwordlog} onChange={this.passwordloghandler} placeholder="Password of user..." /><br />
+            <label>Email :</label> <input type="text" value={this.state.emailog} onChange={this.emailoghandler} placeholder="User Email..."/><br />
+            <label>Password :</label> <input type="password" value={this.state.passwordlog} onChange={this.passwordloghandler} placeholder="User Password..." /><br />
 
             <br></br>
-            <input type="Submit" value="Submit" />
+            <input className='btn-submit' type="Submit" value="Submit" />
           </form>
           <p>Not registered yet? <Link to="/register">Register</Link></p>
 

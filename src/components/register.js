@@ -234,7 +234,7 @@ class Form extends Component {
         // let url = <Login/>
 
         return (
-            <div>
+            <div className='container'>
 
                 <form onSubmit={this.handleSubmit}>
                     <h1>User Registration</h1>
@@ -254,7 +254,9 @@ class Form extends Component {
                     </select><br /> */}
 
                     <label>Upload Image</label> <input type="file" name="image" accept="image/png ,image/jpg" value={this.state.image} onChange={this.imagehandler} placeholder=" " /><br />
-                    <input type="submit" value="Submit" />
+                    <br></br>
+                    <input className='btn-submit' type="submit" value="Submit" />
+                    <br></br>
                 </form>
 
                 <p>already registered? <Link to = "/login" >Login</Link></p>

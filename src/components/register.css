@@ -2,6 +2,13 @@ body{
     background-color:aliceblue
     
   }
+
+  .container form .btn-submit {
+    background-color: #0d6efd;
+    color: #f8f5f3;
+
+  }
+
   h1{
     font-size: 38px;
   }
@@ -59,7 +66,10 @@ body{
   
   
   .container{
-    background-color: antiquewhite;
+
+    position: relative;
+    top: 14em;
+    background-color: aliceblue;
     border-style: hidden;
     border-radius: 15px;
     padding:18px;
